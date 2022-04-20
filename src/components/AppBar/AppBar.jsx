@@ -1,20 +1,30 @@
+import { NavLink } from 'react-router-dom';
 import './AppBar.scss';
 export default function AppBar() {
   //   const isLoggedIn = useSelector(getIsLoggedIn);
   return (
     <header className="header">
-      <ul class="list">
-        <li class="item">
-          {/* <a href="#" className="link"> */}
+      <nav>
+        <NavLink
+          to="/"
+          end
+          // className={({ isActive }) => (isActive ? `active` : '')}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="drivers"
+          // className={({ isActive }) => (isActive ? `${styles.active}` : '')}
+        >
           Drivers
-          {/* </a> */}
-        </li>
-        <li class="item">
-          {/* <a href="#" class="link"> */}
+        </NavLink>
+        <NavLink
+          to="cars"
+          // className={({ isActive }) => (isActive ? `${styles.active}` : '')}
+        >
           Cars
-          {/* </a> */}
-        </li>
-      </ul>
+        </NavLink>
+      </nav>
 
       {/* <Navigation />
       {isLoggedIn ? <UserMenu /> : <AuthNav />} */}

@@ -1,14 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.scss';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import 'modern-normalize/modern-normalize.css';
 import App from './components/App/App';
-import reportWebVitals from './reportWebVitals';
+import './index.scss';
+
+// import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
 );
 
-reportWebVitals();
+// reportWebVitals();
